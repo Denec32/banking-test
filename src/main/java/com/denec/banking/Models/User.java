@@ -3,10 +3,18 @@ package com.denec.banking.Models;
 import java.math.BigDecimal;
 
 public class User {
+    Long id;
     String username;
     String password;
     BigDecimal money;
+    
+    public Long getId() {
+        return this.id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getUsername() {
         return this.username;
@@ -31,5 +39,4 @@ public class User {
     public void setMoney(BigDecimal money) {
         this.money = money;
     }
-
 }
