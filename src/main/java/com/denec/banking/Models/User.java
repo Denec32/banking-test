@@ -2,7 +2,10 @@ package com.denec.banking.Models;
 
 import java.math.BigDecimal;
 
+import org.springframework.data.annotation.Id;
+
 public class User {
+    @Id
     Long id;
     String username;
     String password;
