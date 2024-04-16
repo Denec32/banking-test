@@ -5,19 +5,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.denec.banking.DTO.UserDTO;
-import com.denec.banking.Repositories.UserRepository;
+import com.denec.banking.Models.User;
+import com.denec.banking.Services.UserService;
 
 @RestController
 public class SignUpController {
-    private final UserRepository repository;
+    private final UserService service;
 
-    public SignUpController(UserRepository repository) {
-        this.repository = repository;
+    public SignUpController(UserService service) {
+        this.service = service;
     }
     
     @PostMapping("/signup")
-    public void signUp(@RequestBody UserDTO registeringUser) {
-        return;
+    public User signUp(@RequestBody UserDTO registeringUser) {
+        return service.registerNewUserAccount(registeringUser);
     }
-
 }

@@ -3,14 +3,16 @@ package com.denec.banking.Models;
 import java.math.BigDecimal;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
+@Table(name = "users")
 public class User {
     @Id
     Long id;
     String username;
-    String password;
+    String encryptedPassword;
     BigDecimal money;
-    
+
     public Long getId() {
         return this.id;
     }
@@ -27,12 +29,12 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return this.password;
+    public String getEncryptedPassword() {
+        return this.encryptedPassword;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setEncryptedPassword(String encryptedPassword) {
+        this.encryptedPassword = encryptedPassword;
     }
 
     public BigDecimal getMoney() {

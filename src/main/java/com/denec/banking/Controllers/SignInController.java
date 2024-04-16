@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.denec.banking.DTO.UserDTO;
+import com.denec.banking.Models.User;
 import com.denec.banking.Repositories.UserRepository;
 
 @RestController
@@ -17,6 +18,6 @@ public class SignInController {
     
     @PostMapping("/signin")
     public void signIn(@RequestBody UserDTO registeringUser) {
-        return;
+
     }
 }
